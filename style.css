@@ -1,61 +1,145 @@
+
+/* Media query para dispositivos com largura mínima de 1024px (Desktop) */
+@media (min-width: 1024px) {
+  .imagem-banner {
+    height: 700px; /* A altura que você deseja */
+    width: 100%; /* A largura será 100% do contêiner */
+    object-fit: cover; /* A imagem vai cobrir o espaço, mantendo a proporção e cortando a parte excedente */
+    margin-bottom: 20px; /* Espaço entre a imagem e o conteúdo abaixo */
+  }
+}
+
 header {
-    display:flex;
-    background-color:rgb(177, 89, 89);
-    color:black;
-    justify-content:center;
-    align-items:center;
-    height: 100px;
-    flex-direction: column;
-
-
-}
-nav {
-    display: flex;
-    padding:10px;
-    justify-content:space-between;
-    align-items:center;
-    color:black;
-    text-align:center;
-  }
-  nav ul {
-    background-color:;
-    display:flex;
-    padding:0;
-    align-items:center;
-    margin:0;
-    width:100%;
-    list-style:none;
-    text-align:center;
-  }
-  nav li {
-
-    text-align:center;
-  }
-  nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    display: block;
-    padding: 10px;
-}
-nav a.esquerda {
-    text-align:left;
-    color:black;
-
-}
-  nav a.meio {
-  text-align:center;
-  font-weight:bold;
-  flex:1;
-  text-decoration:none;
-  color:black;
   display: flex;
-  }
-  nav a.direita {
-  text-align:right;
-  color:black;
-  }
-  .card img {
-    width:100px;
+  background-color: rgb(177, 89, 89);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
 
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ajuste de alinhamento vertical */
+  padding: 20px;
+}
+
+.imagem-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #ccc;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+nav li {
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out; /* Transição suave */
+}
+
+nav a:hover {
+  color: #177e89; /* Cor de hover para o menu */
+}
+
+nav a.esquerda {
+  text-align: left;
+  color: black;
+}
+
+nav a.meio {
+  text-align: center;
+  font-weight: bold;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+
+nav a.direita {
+  text-align: right;
+  color: black;
+}
+.beneficios {
+  justify-content:center;
+}
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  width: calc(33.33% - 20px); /* Faz os cards ocuparem 1/3 da largura */
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efeito de zoom suave quando o card é hover */
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; /* Bordas arredondadas na imagem */
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
   }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* 1 card por linha em dispositivos móveis */
+  }
+}
