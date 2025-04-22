@@ -172,3 +172,60 @@ nav a.direita {
     width: 100%; /* 1 card por linha em dispositivos móveis */
   }
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.modelo-negocio {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.modelo-negocio h2 {
+  color: #a52a2a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modelos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.modelo {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.modelo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modelo h3 {
+  color: #a52a2a;
+  margin: 10px 0;
+}
+
+.modelo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modelo ul li {
+  margin-bottom: 8px;
+}
+
+footer {
+  background-color: #8B0000;
+  color: white;
+  text-align: center;
+  padding: 2…
