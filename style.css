@@ -1,208 +1,157 @@
 
-/* Media query para dispositivos com largura mínima de 1024px (Desktop) */
-@media (min-width: 1024px) {
-  .imagem-banner {
-    height: 700px; /* A altura que você deseja */
-    width: 100%; /* A largura será 100% do contêiner */
-    object-fit: cover; /* A imagem vai cobrir o espaço, mantendo a proporção e cortando a parte excedente */
-    margin-bottom: 20px; /* Espaço entre a imagem e o conteúdo abaixo */
-  }
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
 }
 
 header {
-  display: flex;
-  background-color: rgb(177, 89, 89);
+  background-color: #b15959;
   color: white;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  flex-direction: column;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Ajuste de alinhamento vertical */
-  padding: 20px;
-}
-
-.imagem-banner {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px; /* Bordas arredondadas na imagem */
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  border-bottom: 2px solid #ccc;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%;
   justify-content: center;
-}
-
-nav li {
-  padding: 10px 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: black;
   font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease-in-out; /* Transição suave */
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #177e89; /* Cor de hover para o menu */
+  color: #fffffff1;
 }
 
-nav a.esquerda {
-  text-align: left;
-  color: black;
+.imagem-banner {
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
 }
 
-nav a.meio {
-  text-align: center;
-  font-weight: bold;
-  flex: 1;
-  text-decoration: none;
-  color: black;
-  display: flex;
-}
-
-nav a.direita {
-  text-align: right;
-  color: black;
-}
 .beneficios {
-  background-color:coral;
+  background-color: rgb(255, 255, 255);
   padding: 40px 20px;
   text-align: center;
 }
+
 .cards-beneficios {
-  display: flex; /* Torna o contêiner flex */
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  align-items: center; /* Alinha os cards verticalmente */
-  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha, se necessário */
-  gap: 20px; /* Adiciona espaço entre os cards */
-  padding: 20px; /* Espaçamento interno ao redor dos cards */
-  background-color:coral;
-  border:black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
+
 .card {
-  background-color: coral;
-  color: black;
+  background-color: white;
+  width: 300px;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  .card { width: 30%;
-  }
-  
-  box-sizing: border-box;
-  transition: transform 0.3s ease; /* Efeito de transição suave no hover */
-  display: flex;
-  flex-direction: column; /* Alinha os itens no card de forma vertical */
-  align-items: center; /* Centraliza os itens dentro de cada card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
 .card:hover {
-  transform: scale(1.05); /* Efeito de zoom suave quando o card é hover */
+  transform: scale(1.05);
 }
 
 .card img {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 50%; /* Bordas arredondadas na imagem */
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 10px 0;
+  color: #a52a2a;
+  margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 1rem;
-  color: #777;
-}
-.Fundo {
-  background-color:rgb(0, 0, 0);
-  color:azure;
-  text-align:left;
-}
-.texto {
-  text-align:left; /* Alinha o texto à esquerda */
-  max-width:800px;
-  color: azure;
-}
-.foto {
-  text-align:right;
-}
-/* Responsividade para telas menores */
-@media (max-width: 1024px) {
-  .card {
-    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
-  }
+  color: #555;
 }
 
-@media (max-width: 768px) {
-  .card {
-    width: 100%; /* 1 card por linha em dispositivos móveis */
-  }
+.depoimentos {
+  background-color: #000;
+  color: azure;
+  padding: 40px 20px;
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+
+.foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.texto {
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .foto {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .texto {
+    text-align: left;
+  }
 }
 
 .modelo-negocio {
   background-color: #f9f9f9;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .modelo-negocio h2 {
   color: #a52a2a;
-  text-align: center;
   margin-bottom: 30px;
 }
 
 .modelos {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 30px;
 }
 
 .modelo {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .modelo img {
@@ -212,12 +161,13 @@ body {
 
 .modelo h3 {
   color: #a52a2a;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 .modelo ul {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
 }
 
 .modelo ul li {
@@ -228,4 +178,94 @@ footer {
   background-color: #8B0000;
   color: white;
   text-align: center;
-  padding: 2…
+  padding: 20px;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+.banner {
+  width: 100%;
+  height: 250px; /* ou '100vh' para altura de tela cheia */
+  background: url('cafe.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  color: rgb(255, 0, 0);
+  background-color: #555;
+  font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Melhora a legibilidade */
+}
+/* Seção de Depoimentos sem fotos */
+.depoimentos-simples {
+  background-color: #fef7f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.depoimentos-simples h2 {
+  font-size: 2.5em;
+  color: #6f4e37;
+  margin-bottom: 40px;
+}
+
+.lista-depoimentos {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.depoimento-box {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex: 1;
+  min-width: 280px;
+  max-width: 30%;
+  transition: transform 0.3s ease;
+}
+
+.depoimento-box:hover {
+  transform: translateY(-5px);
+}
+
+.depoimento-box i {
+  font-size: 3em;
+  color: #b18c5c;
+  margin-bottom: 15px;
+}
+
+.depoimento-box p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.depoimento-box h3 {
+  font-size: 1.2em;
+  color: #6f4e37;
+  margin-bottom: 5px;
+}
+
+.depoimento-box .cidade {
+  font-size: 0.95em;
+  color: #888;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lista-depoimentos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .depoimento-box {
+    max-width: 90%;
+  }
+}
